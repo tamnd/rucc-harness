@@ -13,6 +13,7 @@
 //! - [`linker_sets`] finds the linker sets that FreeBSD (`set_*`) and NetBSD (`link_set_*`) build
 //!   their kernels and loaders from.
 //! - [`diff`] compares two summaries.
+//! - [`vec`] counts vector and x87 instructions in code built without the FPU.
 //!
 //! Nothing here looks at code bytes beyond [`section_data`]. Where code lands is each compiler's
 //! own business.
@@ -438,6 +439,8 @@ pub fn diff(left: &Summary, right: &Summary) -> Diff {
         linker_sets: sets,
     }
 }
+
+pub mod vec;
 
 #[cfg(test)]
 mod tests;

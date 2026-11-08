@@ -1,0 +1,28 @@
+[package]
+name = "harness-shim"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "The compiler shim of the rucc harnesses as a library, and the compile record it writes"
+
+[dependencies]
+libc.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+sha2.workspace = true
+
+# The workspace lints, restated because this crate needs one exception. Resource usage of a
+# finished child comes from getrusage, which std does not expose, and calling it through libc is
+# one unsafe block in `usage.rs`. `deny` rather than `forbid` so that one block can say so.
+[lints.rust]
+unsafe_code = "deny"
+missing_docs = "warn"
+
+[lints.clippy]
+all = { level = "warn", priority = -1 }
+pedantic = { level = "warn", priority = -1 }
+module_name_repetitions = "allow"
+missing_errors_doc = "allow"
+missing_panics_doc = "allow"

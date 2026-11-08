@@ -1,0 +1,13 @@
+[package]
+name = "harness-agent"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Runs the jobs of a rucc harness on a bounded pool, locally or over ssh"
+
+[dependencies]
+
+[lints]
+workspace = true

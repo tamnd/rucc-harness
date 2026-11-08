@@ -1,0 +1,13 @@
+[package]
+name = "harness-stats"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Medians, ratios, the geometric mean and bootstrap intervals for the rucc harnesses"
+
+[dependencies]
+
+[lints]
+workspace = true

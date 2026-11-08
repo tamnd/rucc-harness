@@ -10,6 +10,7 @@ license = "Apache-2.0"
 repository = "https://github.com/tamnd/rucc-harness"
 
 [workspace.dependencies]
+iced-x86 = { version = "1.21", default-features = false, features = ["std", "decoder", "instr_info"] }
 libc = "0.2"
 object = { version = "0.40", default-features = false, features = ["read_core", "elf", "archive", "std"] }
 serde = { version = "1", features = ["derive"] }

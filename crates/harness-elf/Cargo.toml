@@ -5,9 +5,10 @@ edition.workspace = true
 rust-version.workspace = true
 license.workspace = true
 repository.workspace = true
-description = "Section and symbol summaries of ELF objects and archives for the rucc harnesses"
+description = "Section and symbol summaries of ELF objects and archives, and the vector audit, for the rucc harnesses"
 
 [dependencies]
+iced-x86.workspace = true
 object.workspace = true
 serde.workspace = true
 

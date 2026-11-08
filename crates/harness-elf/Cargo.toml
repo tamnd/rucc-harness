@@ -1,0 +1,19 @@
+[package]
+name = "harness-elf"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Section and symbol summaries of ELF objects and archives for the rucc harnesses"
+
+[dependencies]
+object.workspace = true
+serde.workspace = true
+
+[dev-dependencies]
+object = { workspace = true, features = ["write"] }
+serde_json.workspace = true
+
+[lints]
+workspace = true

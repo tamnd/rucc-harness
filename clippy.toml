@@ -1,0 +1,2 @@
+# Words that doc comments use as plain English, which clippy would otherwise want in backticks.
+doc-valid-idents = ["NetBSD", "FreeBSD", "GitHub", ".."]
